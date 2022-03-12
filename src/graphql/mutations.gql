@@ -1,0 +1,22 @@
+# Unstarring a repo
+
+mutation ($repoId: ID!) {
+	removeStar(input: { starrable: $repoId }) {
+		starrable {
+			stargazers {
+				totalCount
+			}
+		}
+	}
+}
+
+# Starring a repository
+mutation ($repoId: ID!) {
+	addStar(input: { starrableID: $repoId }) {
+		starrable {
+			stargazers {
+				totalCount
+			}
+		}
+	}
+}
