@@ -1,0 +1,44 @@
+# Query for getting Organization's repository open issues
+query ($orgName: String!, $repoName: String!, $lastCount: Int = 5) {
+	repository(owner: $orgName, name: $repoName) {
+		issues(last: $lastCount, states: [OPEN]) {
+			edges {
+				node {
+					title
+					url
+				}
+			}
+		}
+	}
+}
+
+# Query for Github username and avatar url
+{
+	viewer {
+		name
+		avatarUrl
+	}
+}
+
+# Query for getting Organization's repository last 5 issues
+query ($orgName: String!, $repoName: String!) {
+	repository(owner: $orgName, name: $repoName) {
+		id
+		name
+		description
+		viewerHasStarred
+		stargazers {
+			totalCount
+		}
+		issues(last: 5) {
+			edges {
+				node {
+					id
+					title
+					url
+					publishedAt
+				}
+			}
+		}
+	}
+}
