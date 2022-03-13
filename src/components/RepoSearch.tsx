@@ -175,14 +175,12 @@ const RepoSearch: React.FC<IProps> = props => {
 									};
 									// Update the cached data
 									cache.writeQuery({
-										query: {
-											GET_REPO,
-											variables: {
-												orgName: search.orgName,
-												repoName: search.repoName,
-											},
-											data: { repository: newData },
+										query: GET_REPO,
+										variables: {
+											orgName: search.orgName,
+											repoName: search.repoName,
 										},
+										data: { repository: newData },
 									});
 									// Update the state
 									setRepo(newData);
