@@ -5,7 +5,6 @@ import { ApolloProvider } from 'react-apollo';
 import credentials from '../credentials.config';
 import RepoSearch from './RepoSearch';
 import './App.css';
-require('dotenv').config();
 
 // Apollo Client
 const client = new ApolloClient({
@@ -24,6 +23,7 @@ class App extends Component {
 					<header className="App-header">
 						<Header />
 					</header>
+					<RepoSearch client={client} />
 				</div>
 			</ApolloProvider>
 		);
