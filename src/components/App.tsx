@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Header } from './Header';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
-import credentials from '../credentials.config';
+import credentials from '../credentials.config.js';
 import RepoSearch from './RepoSearch';
 import './App.css';
 
