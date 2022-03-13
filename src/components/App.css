@@ -4,17 +4,78 @@
 
 .App-header {
 	background-color: #282c34;
-	min-height: 100vh;
+	min-height: 200px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	font-size: calc(10px + 2vmin);
+	font-size: 16px;
 	color: white;
 }
 
 .viewer-error {
+	color: red;
+	border: 2px solid #ccc;
 }
 
 .viewer-loading {
+	height: 0;
+	width: 0;
+	padding: 15px;
+	border: 6px solid #ccc;
+	border-right-color: #888;
+	border-radius: 22px;
+	animation: rotate 1s infinite linear;
+	-webkit-animation: rotate 1s infinite linear;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+}
+
+@keyframes rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+@-webkit-keyframes rotate {
+	100% {
+		-webkit-transform: rotate(360deg);
+	}
+}
+
+.avatar {
+	width: 80px;
+	border-radius: 50%;
+}
+.repo-search {
+	margin: 30px auto;
+	width: 300px;
+	font-family: Arial;
+	font-size: 16px;
+	text-align: left;
+}
+.repo-search label {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.repo-search input {
+	display: block;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: #676666;
+	width: 100%;
+}
+.repo-search button {
+	display: block;
+	margin-bottom: 20px;
+	font-size: 16px;
+	background-color: rgb(0, 105, 200);
+	border: 2px solid rgb(0, 105, 200);
+	border-radius: 5px;
+	color: white;
+}
+.repo-search h4 {
+	text-align: center;
 }
