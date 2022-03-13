@@ -83,7 +83,7 @@ const GET_REPO = gql`
 
 const STAR_REPO = gql`
 	mutation ($repoId: ID!) {
-		addStar(input: { starrableID: $repoId }) {
+		addStar(input: { starrableId: $repoId }) {
 			starrable {
 				stargazers {
 					totalCount
@@ -223,6 +223,7 @@ const RepoSearch: React.FC<IProps> = props => {
 					</div>
 				</div>
 			)}
+			{searchError && <div className="viewer-error">{searchError}</div>}
 		</div>
 	);
 };
