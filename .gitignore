@@ -1,6 +1,6 @@
 # hide credentials
 .env*
-src/credentials.config.*
+src/credentials.config.js
 
 # dependencies
 /node_modules
